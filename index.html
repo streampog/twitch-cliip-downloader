@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitch Clip Downloader by Streamular.net</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" as="style" href="./styles.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+    </head>
+    <body>
+        <div class="container clip-container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-5">
+                    <a href="/" class="subheader">
+                        The best
+                        <h1>Twitch clip downloader</h1>
+                        🎞️
+                    </a>
+                </div>
+
+                <div class="col-12">
+                    <div class="content-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-container">
+                                    <h2>Enter Clip URL</h2>
+                                    <input type="text" class="clip-url-input" placeholder="https://clips.twitch.tv/SlickSplendidHedgehogDxAbomb" />
+
+                                    <button class="btn get-download-link-button" data-href="https://streamular.net/twitch-clip-downloader">
+                                        Download Clip
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="spacer"></div>
+                                <div class="text-content">
+                                    <p>
+										<a href="https://streamular.net/twitch-clip-downloader">Instantly download your favorite Twitch clips</a> with our easy-to-use Twitch clip downloader. Never miss an epic gaming moment again! Our website allows you to quickly search for and download any public Twitch clip in high quality MP4 format.
+									</p>
+									<p>
+										Whether it's an amazing play, hilarious fail or just a classic stream moment you want to save, our Twitch clip downloader makes it simple. Just enter the clip URL, click download, and the clip will be saved to your device in seconds. No need to deal with third-party software or shady websites.
+									</p>
+									<p>
+										Our service is completely free, fast and easy to use. We do not place any watermarks, logos or time limits on downloaded clips. Download as many as you want!
+									</p>
+									<p>
+										Relive your favorite Twitch clips anytime. Our website works on desktop and mobile. Bookmark us now!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<script>
+			let downloadButton = document.querySelector('.get-download-link-button');
+			downloadButton.addEventListener('click', function() {
+				let clipUrl = document.querySelector('.clip-url-input').value;
+				window.location.href = downloadButton.dataset.href + '#' + clipUrl;
+			});
+		</script>
+    </body>
+</html>
